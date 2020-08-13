@@ -1,0 +1,231 @@
+@import "mq";
+@import "fonts";
+@import "palette";
+// Uncomment for embeds
+//@import "embed";
+// Uncomment for full screen (including immersive article main media)
+//@import "fullscreen";
+.element-atom,
+.interactive-atom {
+  margin: 0 !important;
+}
+
+.content--interactive .content__headline,
+.headline {
+  @include fs-headline(5);
+  font-weight: 700;
+
+  @include mq(mobileMedium) {
+    @include fs-headline(6);
+    font-weight: 700;
+  }
+
+  @include mq(desktop) {
+    @include fs-headline(7);
+    font-weight: 700;
+  }
+}
+
+.content__standfirst,
+.standfirst, .content--interactive .content__standfirst {
+  @include fs-headline(1);
+  font-weight: 200;
+  margin-top: 24px;
+  max-width: 90%;
+  margin-bottom: 48px;
+  @include mq(mobileLandscape) {
+    max-width: 80%;
+  }
+  @include mq(tablet) {
+    max-width: 540px;
+  }
+  @include mq(desktop) {
+    @include fs-headline(2);
+    font-weight: 200;
+  }
+}
+
+.content__main,
+.content__head {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    min-height: 500px;
+    content: " ";
+
+    border-left: 1px solid $neutral-86;
+
+    @include mq(leftCol) {
+      left: calc((100% - 1140px) / 2 + 170px);
+    }
+
+    @include mq(wide) {
+      left: calc((100% - 1300px) / 2 + 250px);
+    }
+  }
+
+  .byline {
+    border-top: none !important;
+    margin-top: 5px;
+  }
+}
+
+a,
+.u-fauxlink {
+  color: $news-main;
+  cursor: pointer;
+  text-decoration: none;
+}
+.tonal--tone-news .tone-colour {
+  color: $news-main;
+}
+
+.content__meta-container {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    $neutral-86,
+    $neutral-86 0.0625rem,
+    transparent 0.0625rem,
+    transparent 0.25rem
+  );
+  background-repeat: repeat-x;
+  background-position: top;
+  -webkit-background-size: 0.0625rem 0.8125rem;
+  background-size: 0.0625rem 0.8125rem;
+  padding-top: 12px;
+  border-top: none;
+}
+.u-cf {
+  .content__meta-container,
+  .meta__extras {
+    margin-left: -10px;
+    margin-right: -10px;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    @include mq(mobileLandscape) {
+      margin-right: -20px;
+      margin-left: -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include mq(desktop) {
+      margin-right: -20px;
+      margin-left: -20px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @include mq(leftCol) {
+      margin-left: -10px;
+      margin-right: -10px;
+      padding-left: 10px;
+      padding-right: 0px;
+    }
+  }
+  .meta__extras {
+    @include mq(desktop) {
+      margin-left: -10px;
+    }
+  }
+}
+
+.meta__numbers {
+  @include mq(desktop) {
+    margin-right: calc(960px - 620px);
+  }
+  @include mq(wide) {
+    margin-right: calc(1040px - 620px);
+  }
+}
+
+.content__meta-container {
+  @include mq(desktop) {
+    width: 960px !important;
+  }
+  @include mq(wide) {
+    width: 1040px !important;
+  }
+}
+.content__main-column--interactive {
+  & > p,
+  & > h2,
+  & > ul,
+  & > sub,
+  .element-interactive,
+  .element-atom,
+  .element-video {
+    max-width: 620px;
+
+    @include mq(leftCol) {
+      margin-left: 160px !important;
+    }
+    @include mq(wide) {
+      margin-left: 240px !important;
+    }
+  }
+
+    & > h2 {
+    @include fs-header(2);
+    font-weight: 700;
+    margin-top: 36px;
+    margin-bottom: 6px;
+
+    @include mq(desktop) {
+      @include fs-header(3);
+    }
+  }
+
+  .element--immersive {
+    max-width: initial;
+    margin-left: 0 !important;
+    margin-bottom: 48px !important;
+    font-size: 0;
+
+    @include mq(wide) {
+      width: 1260px;
+    }
+  }
+
+  .element--showcase {
+    max-width: 860px;
+  }
+}
+
+.content--interactive:not(.paid-content) .element-interactive {
+  background-color: #fff;
+}
+
+.ios,
+.android {
+  .headline {
+    @include fs-headline(5);
+    font-weight: 700;
+  
+    @include mq(mobileMedium) {
+      @include fs-headline(6);
+      font-weight: 700;
+    }
+  }
+  .standfirst {
+    @include fs-headline(1);
+    font-weight: 200;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+  .byline {
+      a {
+      @include fs-header(1);
+      font-weight: 700;
+    }
+  }
+  h2 {
+    @include fs-header(2);
+    font-weight: 700;
+    margin-top: 36px;
+    margin-bottom: 6px;
+  }
+}
