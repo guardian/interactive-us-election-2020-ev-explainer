@@ -1,10 +1,24 @@
 @import "fonts";
 @import "mq";
 @import "palette";
-@import "enhancer";
-@import "header";
 
 .interactive-atom {
     margin: 0;
     padding: 0;
+}
+
+.elex-map {
+    width: 100%;
+    max-width: 860px;
+    overflow: visible !important;
+}
+
+.elex-state {
+    fill: white;
+    stroke: #dcdcdc;
+}
+
+.elex-bubble {
+    fill: $news-main;
+    mix-blend-mode: multiply;
 }

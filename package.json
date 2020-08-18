@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "start": "gulp",
+    "join": "babel-node shared/server/join.js"
   },
   "author": "",
   "license": "ISC",
@@ -46,9 +47,12 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-import-bangtext-node": "^0.1.4",
+    "d3": "^5.16.0",
     "gulp-replace": "^1.0.0",
     "mkdirp": "^0.5.1",
     "request-promise": "^4.2.5",
-    "uglifyjs-webpack-plugin": "^2.2.0"
+    "topojson": "^3.0.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "us-atlas": "^3.0.0"
   }
 }
