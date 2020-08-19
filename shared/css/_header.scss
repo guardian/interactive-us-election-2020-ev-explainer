@@ -1,6 +1,11 @@
 .element-atom,
 .interactive-atom {
   margin: 0 !important;
+
+}
+
+.content--interactive {
+    background-color: #fbf6ef;
 }
 
 .content--interactive .content__headline,
@@ -8,22 +13,25 @@
   &::before {
     content: "";
     display: block;
-    background-image: url("<%= path %>/header-image.png");
+    background-image: url("<%= path %>/electoral-vote-header.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left 0px bottom 0px;
-    height: 32vw;
-    margin-top: 0px;
+    height: 44vw;
     @include mq(tablet) {
       border-top: 0;
-      height: 300px;
+     
     }
 
     @include mq(desktop) {
       width: 940px;
+      height: 440px;
     }
     @include mq(leftCol) {
       width: 950px;
+      padding-bottom: 10px;
+      // padding-top: 10px;
+      background-position: left 0px bottom 0px;
     }
     @include mq(wide) {
       width: 1030px;
@@ -35,7 +43,7 @@
     background-color: $neutral-86;
     position: absolute;
     height: 1px;
-    top: calc(32vw);
+    top: calc(44vw);
     left: -10px;
 
     @include mq(mobileLandscape) {
@@ -44,14 +52,16 @@
     }
 
     @include mq(tablet) {
-      top: 300px;
+   
     }
     @include mq(desktop) {
       width: 980px;
+         top: 440px;
     }
     @include mq(leftCol) {
       left: -10px;
       width: 970px;
+      top: 460px;
     }
     @include mq(wide) {
       width: 1050px;
@@ -71,6 +81,9 @@
   @include mq(tablet) {
     @include fs-titlepiece(2);
 
+  }
+  @include mq(leftCol) {
+    padding-top: 10px;
   }
 }
 
@@ -216,7 +229,7 @@ a,
     }
   }
   .headline:after {
-    top: calc(32vw + 10px);
+    top: calc(44vw + 10px);
     width: calc(100% + 10px);
   }
   .standfirst {
