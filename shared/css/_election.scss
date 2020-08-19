@@ -1,8 +1,8 @@
 .content--interactive .social-icon {
-  border-color: 1px solid $biden-blue;
+  border: 1px solid $biden-blue;
 }
 
-.social-icon:hover {
+.content--interactive .social-icon:hover {
   background-color: $biden-blue;
-  border-color: 1px solid $biden-blue;
+  border: 1px solid $biden-blue;
 }
