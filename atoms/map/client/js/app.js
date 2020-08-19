@@ -41,7 +41,7 @@ const draw = () => {
 
     const evScale = d3.scaleSqrt()      // square-root scale ...
         .domain([ 0, 55 ])              // ... from 0 to 55 electoral votes
-        .range([ 0, 40 ])               // .. mapped to a circle radius between 0 and 30px
+        .range([ 0, 40 ])               // .. mapped to a circle radius between 0 and 40px
 
     const popScale = d3.scaleSqrt()
         .domain([ 0, 20*10**6 ])
@@ -82,11 +82,11 @@ const draw = () => {
 
     // after 2 seconds, switch to the population scale instead
 
-    stateBubbles
-        .transition()
-        .delay(2000)
-        .duration(800)
-        .attr('r', d => popScale(d.pop))
+    // stateBubbles
+    //     .transition()
+    //     .delay(2000)
+    //     .duration(800)
+    //     .attr('r', d => popScale(d.pop))
 
 }
 
