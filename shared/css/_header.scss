@@ -9,6 +9,10 @@
     background-color: #fbf6ef;
 }
 
+.content--interactive:not(.paid-content) .element-interactive {
+  background-color: #fbf6ef;
+}
+
 .content--interactive .content__headline,
 .headline {
   &::before {
@@ -217,9 +221,6 @@ a,
 
 .ios,
 .android {
-  .content--interactive {
-    background-color: #fbf6ef;
-}
   .article__header .headline {
     padding: 4px 12px 30px 12px;
   }
