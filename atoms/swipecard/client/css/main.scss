@@ -47,7 +47,13 @@
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
+    opacity: 0.4;
+
+    &:hover {
+           opacity: 1;
+       }
 }
+
 .swiper-button-next {
     background-image: url("data:image/svg+xml,%3Csvg width='12' height='22' viewBox='0 0 12 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.974997 0L0 0.949997L8.32497 10.925L0 20.8999L0.974997 21.8499L11.375 11.45V10.4L0.974997 0Z' fill='%23C70000'/%3E%3C/svg%3E%0A");
     left: auto;
@@ -59,6 +65,11 @@
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
+       opacity: 0.4;
+
+       &:hover {
+           opacity: 1;
+       }
 }
 
 .swiper-pagination-bullet-active {
