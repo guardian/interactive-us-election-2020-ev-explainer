@@ -13,12 +13,21 @@
     padding: 0;
 }
 
+.swiper-header {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
 .swiper-container {
       width: auto;
-      height: 320px;
+      height: 350px;
     border: 1px solid $neutral-replacement;
     padding: 10px;
+    @include mq(mobileLandscape) {
+        height: 330px;
     }
+}
 .swiper-slide {
       text-align: left;
       @include fs-textSans(3);
@@ -31,6 +40,13 @@
       flex-direction: column; 
       justify-content: flex-start;
       align-items: center;
+}
+
+.slide-copy {
+    min-height: 48px;
+    @include mq(mobileLandscape) {
+        min-height: 32px;
+    }
 }
 
 .slide-svg {
@@ -74,4 +90,10 @@
 
 .swiper-pagination-bullet-active {
     background: $news-main;
+}
+
+.swiper-source {
+    @include fs-textSans(2);
+    padding-top: 4px;
+    color: $neutral-46;
 }
