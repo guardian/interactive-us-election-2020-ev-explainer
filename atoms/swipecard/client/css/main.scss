@@ -14,6 +14,7 @@
 }
 
 .swiper-header {
+    @include fs-headline(2);
     font-size: 20px;
     line-height: 24px;
     font-weight: bold;
@@ -21,11 +22,14 @@
 
 .swiper-container {
       width: auto;
-      height: 350px;
+      height: 380px;
     border: 1px solid $neutral-replacement;
     padding: 10px;
     @include mq(mobileLandscape) {
-        height: 330px;
+        height: 360px;
+    }
+    @include mq(tablet) {
+        height: 350px;
     }
 }
 .swiper-slide {
@@ -43,9 +47,12 @@
 }
 
 .slide-copy {
-    min-height: 48px;
+    min-height: 80px;
     @include mq(mobileLandscape) {
-        min-height: 32px;
+        min-height: 64px;
+    }
+    @include mq(tablet) {
+        min-height: 48px;
     }
 }
 
